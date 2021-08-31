@@ -44,9 +44,17 @@ function() {
             document.getElementById("risultato").innerHTML = message;
             document.getElementById("cpu-number").innerHTML = cpuNumber;
             // bottone invia nascosto
+            document.getElementById("user-number").classList.add("hide");
+            document.getElementById("pari-dispari").classList.add("hide");
+            // input  nascosti
             document.getElementById("invia").classList.add("hide");
+            // mostra scelte
+            document.getElementById("chosen-number").classList.add("open");
+            document.getElementById("chosen-option").classList.add("open");
+            document.getElementById("chosen-number").innerHTML = userNumber;
+            document.getElementById("chosen-option").innerHTML = userChoise;
             // mostra wrapper__bottom
-            document.getElementById("bottom").classList.add("open");
+            document.getElementById("bottom").classList.add("flex");
         } else {
             alert("Errore! Inserisci un numero da 1 a 5")
         }
@@ -56,9 +64,18 @@ function() {
 
 btnRitenta.addEventListener ("click",
     function() {
+        // refresh numero
         document.getElementById("user-number").value = ""; 
+        // mostra btn-invia
         document.getElementById("invia").classList.remove("hide");
-        document.getElementById("bottom").classList.remove("open");
+        // nascondi bottom
+        document.getElementById("bottom").classList.remove("flex");
+        // nascondi scelte
+        document.getElementById("chosen-number").classList.remove("open");
+        document.getElementById("chosen-option").classList.remove("open");
+        // mostra input/select
+        document.getElementById("user-number").classList.remove("hide");
+        document.getElementById("pari-dispari").classList.remove("hide");
     }
     
 );
