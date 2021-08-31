@@ -7,7 +7,6 @@
 function getRandomNumber(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min);
 }
-
 function isEven (num1) {
     if (num1 % 2) {
         return true;
@@ -19,14 +18,20 @@ function isEven (num1) {
 var btnInvia = document.getElementById("invia");
 // btn-ritenta
 var btnRitenta = document.getElementById("ritenta");
-// user-number
+
 btnInvia.addEventListener("click",
 function() {
+    // user-number
     var userNumber = document.getElementById("user-number").value; 
+    // user-choise
     var userChoise = document.getElementById("pari-dispari").value;
+    // verifica
     if( userNumber>0 && userNumber<6 && !(isNaN(userNumber))) {
+            // cpu-number
             var cpuNumber = getRandomNumber(1, 5);
+            // somma
             var sum = userNumber + cpuNumber;
+            // messaggio
             var message = "";
             if (isEven(sum) && userChoise =="pari") {
                 message = "Congratulazioni! Hai vinto";
@@ -34,12 +39,13 @@ function() {
                 message = "Congratulazioni! Hai vinto";
             } else {
                 message = "Hai perso! Ritenta";
-
             }
-            
+            // stampa risultati
             document.getElementById("risultato").innerHTML = message;
             document.getElementById("cpu-number").innerHTML = cpuNumber;
+            // bottone invia nascosto
             document.getElementById("invia").classList.add("hide");
+            // mostra wrapper__bottom
             document.getElementById("bottom").classList.add("open");
         } else {
             alert("Errore! Inserisci un numero da 1 a 5")
