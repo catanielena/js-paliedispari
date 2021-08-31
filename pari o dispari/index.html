@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Pari o dispari?</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="form">
+                <label for="user-number">Inserisci un numero da 1 a 5</label>
+                <input type="number" id="user-number">
+                <label for="pari-dispari">Pari o dispari?</label>
+                <select name="pari-dispari" id="pari-dispari">
+                    <option value="pari">pari</option>
+                    <option value="dispari">dispari</option>
+                </select>
+                <button type="button" class="btn" id="invia">invia</button>
+            </div>
+            <div class="wrapper__bottom" id="bottom">
+                <div class="cpu">
+                    Il numero della cpu: <span id="cpu-number"></span>
+                </div>
+                <div id="risultato"></div>
+                <button type="button" class="btn" id="ritenta">ritenta</button>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

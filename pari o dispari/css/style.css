@@ -1,0 +1,11 @@
+.wrapper__bottom {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
