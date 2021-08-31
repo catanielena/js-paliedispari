@@ -19,6 +19,7 @@ var btn = document.getElementById("send");
 btn.addEventListener("click",
 function() {
         var userWord = document.getElementById("word").value;
+        userWord = userWord.replace(/\s/g, '');
         console.log(isPalindrom(userWord));
         if (isPalindrom(userWord) == true) {
             document.getElementById("word").style.backgroundColor = "green";
